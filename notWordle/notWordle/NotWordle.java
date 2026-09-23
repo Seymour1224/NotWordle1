@@ -2,6 +2,9 @@ package notWordle;
 
 import java.util.Random;
 
+import java.io.*;
+import java.util.Scanner;
+
 public class NotWordle {
 
 	
@@ -36,5 +39,24 @@ public class NotWordle {
 		for(index = 0; index < theArray.length; index++) {
 			System.out.printf("[%d]  ", theArray[index]);
 		}
+		System.out.println();
+	}
+	
+	public void start() {
+		Scanner scan = new Scanner(System.in);
+		String nickName;
+		
+		System.out.print("What is Your Name: ");
+		nickName = scan.nextLine();
+	}
+	
+	public void highscore() throws IOException {
+		BufferedReader br = new BufferedReader(new FileReader("notWordleHighscore.txt"));
+		BufferedWriter bw = new BufferedWriter(new FileWriter("notWordleHighscore.txt",false));
+		
+	}
+	
+	public void run() {
+		
 	}
 }
